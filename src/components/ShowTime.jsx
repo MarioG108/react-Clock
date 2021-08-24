@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import clock from '../clock-regular.svg';
 
 function ShowTime(props) {
     var { timeState } = props
@@ -24,7 +24,7 @@ function ShowTime(props) {
     return (
         <div id="timer">
             Time is <br />
-            <img src="../clock-regular.svg" className="clock-icon" alt="clock"/>
+            <img src={clock} className="clock-icon" alt="clock"/>
                 <span id="time"> {time}</span>
         </div>
     )
