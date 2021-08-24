@@ -7,6 +7,7 @@ function ShowTime(props) {
     var intervalId = null;
     useEffect(() => {
         if (timeState === true) {
+            // eslint-disable-next-line
             intervalId = setInterval(() => {setTime(getTime())}, 1000);
         }
         return () => {
@@ -23,7 +24,7 @@ function ShowTime(props) {
     return (
         <div id="timer">
             Time is <br />
-            <img src="../clock-regular.svg" className="clock-icon"/>
+            <img src="../clock-regular.svg" className="clock-icon" alt="clock"/>
                 <span id="time"> {time}</span>
         </div>
     )
